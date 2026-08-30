@@ -12,7 +12,7 @@
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'IBM Plex Sans', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
-  --font-signature: 'Alex Brush', 'Segoe Print', 'Bradley Hand', cursive;
+  --font-signature: 'Alex Brush', 'Segoe Script', 'Lucida Handwriting', 'Bradley Hand', cursive;
 }
 
 *{
@@ -24,6 +24,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--navbar-height));
+  overflow-x: hidden;
 }
 
 body {
@@ -31,13 +32,13 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  overflow-x: hidden;
+  /* overflow-x: hidden;  ← امسح السطر ده من هنا */
 }
 
 #root {
   width: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
+  /* overflow-x: hidden;  ← وامسحه من هنا كمان */
 }
 
 img,
