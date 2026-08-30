@@ -1,4 +1,4 @@
-import './SectionDots.css';
+import './sectiondots.css';
 
 /**
  * SectionDots — fixed vertical dot navigation on the right edge of the
