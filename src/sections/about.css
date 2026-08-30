@@ -1,0 +1,108 @@
+.about {
+    padding: var(--section-padding);
+    text-align: center;
+    position: relative;
+    background: rgba(15, 23, 42, 0.5);
+        background: linear-gradient(180deg, #12243a 0%, #102d42 100%);
+
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: min(70%, 460px);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 55%, transparent);
+    transform: translateX(-50%);
+    opacity: 0.8;
+}
+
+.about h2 {
+    font-size: var(--section-head);
+    margin-bottom: 2.5rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-text {
+    flex: 1.4;
+    max-width: 60ch;
+    color: rgba(241, 245, 249, 0.9);
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+.about-stats {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    border-left: 1px solid rgba(148, 163, 184, 0.2);
+    padding-left: 2rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    padding: 1.1rem 1.2rem;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.45);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.stat-number {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: var(--accent);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted, #94A3B8);
+    margin-top: 0.3rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-stats {
+        border-left: none;
+        padding-left: 0;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .stat {
+        align-items: center;
+        min-width: 150px;
+    }
+}

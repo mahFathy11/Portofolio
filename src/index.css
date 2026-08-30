@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Alex+Brush&display=swap');
+
+:root {
+  --bg: #0F172A;
+  --accent: #38BDF8;
+  --text: #F1F5F9;
+  --navbar-height: 70px;
+  --section-padding: 3rem 2rem;
+  --section-head: clamp(1.5rem, 4vw, 2.5rem);
+
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-signature: 'Alex Brush', 'Segoe Print', 'Bradley Hand', cursive;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--navbar-height));
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+section[id],
+[id] {
+  scroll-margin-top: calc(var(--navbar-height) + 1.25rem);
+}
+
+@media (max-width: 600px) {
+  :root {
+    --navbar-height: 84px;
+  }
+}

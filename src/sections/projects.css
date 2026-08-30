@@ -1,0 +1,13 @@
+.projects-section {
+    padding: var(--section-padding);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.projects-title {
+    text-align: center;
+    color: var(--text);
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 700;
+    margin-bottom: 3rem;
+}

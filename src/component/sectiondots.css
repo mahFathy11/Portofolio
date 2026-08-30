@@ -1,0 +1,63 @@
+.section-dots {
+    position: fixed;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    z-index: 40;
+}
+
+.section-dot {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.6rem;
+    background: none;
+    border: none;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+.section-dot-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    background: transparent;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.section-dot-label {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+}
+
+.section-dot:hover .section-dot-label,
+.section-dot:focus-visible .section-dot-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section-dot:hover .section-dot-circle,
+.section-dot:focus-visible .section-dot-circle {
+    border-color: var(--accent);
+}
+
+@media (max-width: 900px) {
+    .section-dots {
+        display: none;
+    }
+}

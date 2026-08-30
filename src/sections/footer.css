@@ -1,0 +1,15 @@
+footer{
+    padding: 1rem;
+    background: #061429f2;
+    text-align: center;
+    border-top: 1px solid #124369;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+}
+
+footer span{
+    color:var(--accent);
+    font-weight: 600;
+    font-size: 1rem;
+}
